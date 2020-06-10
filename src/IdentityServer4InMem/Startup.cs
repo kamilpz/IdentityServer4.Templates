@@ -3,7 +3,6 @@
 
 
 using IdentityServer4;
-using IdentityServer4.Quickstart.UI;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -48,7 +47,7 @@ namespace IdentityServer4InMem
                 options.Events.RaiseFailureEvents = true;
                 options.Events.RaiseSuccessEvents = true;
             })
-                .AddTestUsers(TestUsers.Users);
+                .AddTestUsers(Config.Users);
 
             // in-memory, code config
             builder.AddInMemoryIdentityResources(Config.Ids);
