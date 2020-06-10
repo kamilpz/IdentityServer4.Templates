@@ -41,23 +41,23 @@ namespace IdentityServer4InMem
             }
         };
 
-        public static IEnumerable<IdentityResource> Ids =>
-            new IdentityResource[]
+        public static List<IdentityResource> Ids =>
+            new List<IdentityResource>
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
             };
 
 
-        public static IEnumerable<ApiResource> Apis =>
-            new ApiResource[]
+        public static List<ApiResource> Apis =>
+            new List<ApiResource>
             {
                 new ApiResource("api1", "My API #1")
             };
 
 
-        public static IEnumerable<Client> Clients =>
-            new Client[]
+        public static List<Client> Clients =>
+            new List<Client>
             {
                 // client credentials flow client
                 new Client
